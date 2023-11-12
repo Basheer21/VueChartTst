@@ -6,25 +6,25 @@
 </template>
 
 <script setup>
-// import { ref, onMounted } from 'vue'; // this line is added for vue
-
 import Chart from "chart.js/auto";
-import { onMounted } from "vue";
+import { ref, onMounted } from "vue";
 
 //we only added the mounted part
+
+const a = ref(5);
 
 onMounted(() => {
     const ctx = document.getElementById("chartCanvas");
 
     new Chart(ctx, {
-        type: "bar",
+        type: "line",
         data: {
             labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
             datasets: [
                 {
-                    label: "# of Votes",
+                    // label: "# of Votes",
                     data: [12, 19, 3, 5, 2, 3],
-                    borderWidth: 1,
+                    // borderWidth: 1,
                 },
             ],
         },

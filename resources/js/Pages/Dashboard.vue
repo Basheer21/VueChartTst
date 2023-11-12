@@ -1,8 +1,17 @@
 <script setup>
+import { defineProps, onMounted } from "vue";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import { Head } from "@inertiajs/vue3";
 import ChartComponent from "@/Components/ChartComponent.vue"; // Import your chart component here
 import ChartComponent2 from "@/Components/ChartComponent2.vue"; // Import your chart component here
+
+const props = defineProps({
+    chartData: Object,
+});
+
+onMounted(() => {
+    console.log(props.chartData);
+});
 </script>
 
 <template>
