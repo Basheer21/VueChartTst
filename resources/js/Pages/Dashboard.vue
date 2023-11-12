@@ -9,9 +9,9 @@ const props = defineProps({
     chartData: Object,
 });
 
-onMounted(() => {
-    console.log(props.chartData);
-});
+// onMounted(() => {
+//     console.log(props.chartData);
+// });
 </script>
 
 <template>
@@ -33,7 +33,7 @@ onMounted(() => {
                 >
                     <div class="p-6 text-gray-900 dark:text-gray-100">
                         You're logged in!
-                        <ChartComponent />
+                        <ChartComponent :chart-data="chartData" />
                     </div>
                 </div>
             </div>

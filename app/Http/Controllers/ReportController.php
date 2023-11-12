@@ -12,10 +12,10 @@ class ReportController extends Controller
     public function showChartData()
     {
         $chartData = [
-            'labels' => ["CS", "IT", "ECE", "EE", "ME", "BE"],
+            'labels' => ["Red", "Blue", "Yellow", "Green", "Purple", "Black"],
             'datasets' => [
                 [
-                    'label' => '# of students',
+                    // 'label' => '# of students',
                     'data' => [105, 124, 78, 91, 62, 56],
                     // other dataset properties...
                 ],
